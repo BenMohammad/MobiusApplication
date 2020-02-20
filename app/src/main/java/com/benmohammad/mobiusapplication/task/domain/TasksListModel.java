@@ -15,6 +15,8 @@ import static androidx.core.util.Preconditions.checkNotNull;
 @AutoValue
 public abstract class TasksListModel {
 
+    public static final TasksListModel DEFAULT = TasksListModel.builder().build();
+
     @Nullable
     public abstract ImmutableList<Task> tasks();
 

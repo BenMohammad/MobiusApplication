@@ -20,6 +20,6 @@ interface TasksListEffect_dataenum {
 
     dataenum_case NavigateToTaskDetails(Task task);
 
-    dataenum_case StastTaskCreationFlow();
+    dataenum_case StartTaskCreationFlow();
 
 }
