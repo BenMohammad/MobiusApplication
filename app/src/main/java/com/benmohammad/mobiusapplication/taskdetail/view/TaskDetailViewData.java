@@ -4,7 +4,6 @@ import com.google.auto.value.AutoValue;
 @AutoValue
 public abstract class TaskDetailViewData {
 
-
     public abstract TextViewData title();
 
     public abstract TextViewData description();

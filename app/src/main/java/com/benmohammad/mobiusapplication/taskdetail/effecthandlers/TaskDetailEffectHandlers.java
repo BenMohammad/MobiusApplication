@@ -38,7 +38,7 @@ public class TaskDetailEffectHandlers {
                 .addAction(NotifyTaskMarkedComplete.class, view::showTaskMarkedComplete, mainThread())
                 .addAction(NotifyTaskMarkedActive.class, view::showTaskMarkedActive, mainThread())
                 .addAction(NotifyTaskDeletionFailed.class, view::showTaskDeletionFailed, mainThread())
-                .addAction(NotifyTasSaveFailed.class, view::showTaskSavingfailed, mainThread())
+                .addAction(NotifyTasSaveFailed.class, view::showTaskSavingFailed, mainThread())
                 .addConsumer(OpenTaskEditor.class, openTaskEditorHandler(launchEditor), mainThread())
                 .addAction(Exit.class, dismiss, mainThread())
                 .build();

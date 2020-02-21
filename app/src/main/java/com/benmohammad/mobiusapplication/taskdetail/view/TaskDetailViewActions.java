@@ -6,7 +6,7 @@ public interface TaskDetailViewActions {
 
     void showTaskMarkedActive();
 
-    void showTaskSavingfailed();
+    void showTaskSavingFailed();
 
     void showTaskDeletionFailed();
 }
