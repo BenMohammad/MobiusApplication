@@ -15,7 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.benmohammad.mobiusapplication.R;
-import com.benmohammad.mobiusapplication.addedittask.AddEditTaskActivity;
 import com.benmohammad.mobiusapplication.data.Task;
 import com.benmohammad.mobiusapplication.data.TaskBundlePacker;
 import com.benmohammad.mobiusapplication.taskdetail.domain.TaskDetailEvent;
@@ -54,8 +53,8 @@ public class TaskDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        //FloatingActionButton fab = getActivity().findViewById(R.id.fab_edit_task);
-        //mTaskDetailViews = new TaskDetailViews(inflater, container, fab, mMenuEvents);
+        FloatingActionButton fab = getActivity().findViewById(R.id.fab_edit_task);
+        mTaskDetailViews = new TaskDetailViews(inflater, container, fab, mMenuEvents);
         mController = TaskDetailInjector.createController(
                 TaskDetailEffectHandlers.createEffectHandlers(
                         mTaskDetailViews, getContext(), this::dismiss, this::openTaskEditor),
