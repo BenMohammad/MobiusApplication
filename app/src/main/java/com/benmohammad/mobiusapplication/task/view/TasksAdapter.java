@@ -47,7 +47,7 @@ public class TasksAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = convertView;
         if(rowView == null) {
-            LayoutInflater inflater = LayoutInflater.from(convertView.getContext());
+            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             rowView = inflater.inflate(R.layout.task_item, parent, false);
         }
 
@@ -58,8 +58,8 @@ public class TasksAdapter extends BaseAdapter {
         CheckBox completeCb = rowView.findViewById(R.id.complete);
         completeCb.setChecked(task.completed());
 
-        Drawable background = parent.getContext().getResources().getDrawable(task.backgroundDrawableId());
-        rowView.setBackgroundDrawable(background);
+        //Drawable background = parent.getContext().getResources().getDrawable(task.backgroundDrawableId());
+        //rowView.setBackgroundDrawable(background);
 
         completeCb.setOnClickListener(__ -> {
             if(mItemListener == null) return;

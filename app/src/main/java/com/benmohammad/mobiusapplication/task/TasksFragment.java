@@ -99,6 +99,7 @@ public class TasksFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.tasks_fragment_menu, menu);
+        
         super.onCreateOptionsMenu(menu, inflater);
 
     }
