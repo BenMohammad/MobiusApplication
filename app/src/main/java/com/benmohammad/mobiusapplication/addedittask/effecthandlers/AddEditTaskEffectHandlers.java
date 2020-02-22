@@ -27,17 +27,17 @@ import static io.reactivex.android.schedulers.AndroidSchedulers.mainThread;
 
 public class AddEditTaskEffectHandlers {
 
-    public static ObservableTransformer<AddEditTaskEffect, AddEditTaskEvent> createEfectHandlers(
+    public static ObservableTransformer<AddEditTaskEffect, AddEditTaskEvent> createEffectHandlers(
             Context context, Action showTasksList, Action showEmptyTaskError
     ) {
-        TasksRemoteDataSource remoteSourcee = TasksRemoteDataSource.getInstance();
-        TasksLocalDataSource localource = TasksLocalDataSource.getInstance(context ,SchedulerProvider.getInstance());
+        TasksRemoteDataSource remoteSource = TasksRemoteDataSource.getInstance();
+        TasksLocalDataSource localSource = TasksLocalDataSource.getInstance(context ,SchedulerProvider.getInstance());
 
         return RxMobius.<AddEditTaskEffect, AddEditTaskEvent>subtypeEffectHandler()
                 .addAction(NotifyEmptyTaskNotAllowed.class, showEmptyTaskError, mainThread())
                 .addAction(Exit.class, showTasksList, mainThread())
-                .addFunction(CreateTask.class, createTaskHandler(remoteSourcee, localource))
-                .addFunction(SaveTask.class, saveTaskHandler(remoteSourcee, localource))
+                .addFunction(CreateTask.class, createTaskHandler(remoteSource, localSource))
+                .addFunction(SaveTask.class, saveTaskHandler(remoteSource, localSource))
                 .build();
     }
 

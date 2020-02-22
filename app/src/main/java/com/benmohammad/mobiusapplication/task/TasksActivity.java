@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.benmohammad.mobiusapplication.R;
 import com.benmohammad.mobiusapplication.statistics.StatisticsActivity;
+import com.benmohammad.mobiusapplication.util.ActivityUtils;
 import com.google.android.material.navigation.NavigationView;
 
 public class TasksActivity extends AppCompatActivity {
@@ -38,6 +39,12 @@ public class TasksActivity extends AppCompatActivity {
             setUpDrawerContent(navigationView);
         }
 
+        TasksFragment tasksFragment =
+                (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        if(tasksFragment == null) {
+            tasksFragment = TasksFragment.newInstance();
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), tasksFragment, R.id.contentFrame);
+        }
     }
 
 

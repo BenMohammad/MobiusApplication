@@ -24,9 +24,9 @@ public class AddEditTaskInjector {
     }
 
     private static MobiusLoop.Factory<AddEditTaskModel, AddEditTaskEvent, AddEditTaskEffect> createLoop(
-            ObservableTransformer<AddEditTaskEffect, AddEditTaskEvent> effecthandlers
+            ObservableTransformer<AddEditTaskEffect, AddEditTaskEvent> effectHandlers
     ) {
-        return RxMobius.loop(AddEditTaskLogic::update, effecthandlers)
+        return RxMobius.loop(AddEditTaskLogic::update, effectHandlers)
                 .logger(AndroidLogger.tag("Add/Edit Tasks"));
     }
 }

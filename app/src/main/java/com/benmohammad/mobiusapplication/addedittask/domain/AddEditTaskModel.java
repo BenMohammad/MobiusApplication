@@ -16,7 +16,7 @@ public abstract class AddEditTaskModel {
 
     public abstract Builder toBuilder();
 
-    public static Builder build() {
+    public static Builder builder() {
         return new AutoValue_AddEditTaskModel.Builder();
     }
 

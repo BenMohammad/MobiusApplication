@@ -147,7 +147,7 @@ public class TasksFragment extends Fragment {
     }
 
     public void showAddTask() {
-        //startActivityForResult(AddEditTaskActivity.addTask(getContext()), AddEditTaskActivity.REQUEST_ADD_TASK);
+        startActivityForResult(AddEditTaskActivity.addTask(getContext()), AddEditTaskActivity.REQUEST_ADD_TASK);
     }
 
 
