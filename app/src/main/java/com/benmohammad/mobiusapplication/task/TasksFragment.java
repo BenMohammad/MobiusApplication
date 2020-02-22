@@ -152,7 +152,7 @@ public class TasksFragment extends Fragment {
 
 
     public void showTaskDetailUi(Task task) {
-     //   startActivity(TaskDetailActivity.showTask(getContext(), task););
+        startActivity(TaskDetailActivity.showTask(getContext(), task));
     }
 
 

@@ -47,7 +47,7 @@ public class TaskDetailViews implements TaskDetailViewActions, Connectable<TaskD
         mFab = fab;
     }
 
-    private View getRootView() {
+    public View getRootView() {
         return mRootView;
     }
 
