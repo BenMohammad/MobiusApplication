@@ -16,7 +16,7 @@ import static com.benmohammad.mobiusapplication.statistics.domain.StatisticsEven
 
 public class StatisticsEffectHandlers {
 
-    public static ObservableTransformer<StatisticsEffect, StatisticsEvent> createEffectHandller(
+    public static ObservableTransformer<StatisticsEffect, StatisticsEvent> createEffectHandler(
             Context context
     ) {
         TasksLocalDataSource localSource =
